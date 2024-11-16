@@ -3,7 +3,7 @@
 #include <pthread.h>
 
 int mails = 0;
-pthread_mutex_t mutex; // sort of like: bool should_lock;
+pthread_mutex_t mutex;  // = PTHREAD_MUTEX_INITIALIZER; // sort of like: bool should_lock;
 
 void* routine() {
     for (size_t i = 0; i < 1000000; i++) {
