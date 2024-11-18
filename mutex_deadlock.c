@@ -40,6 +40,8 @@ void* routine() {
 
 int main()
 {
+    srand(time(NULL));
+
     pthread_t t[N];
     pthread_mutex_init(&fuelMutex, NULL);
     pthread_mutex_init(&waterMutex, NULL);
